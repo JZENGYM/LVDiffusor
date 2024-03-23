@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python training.py --rotation False --scene_name dinning_table

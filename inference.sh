@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python eval_model.py --log_dir office_desk_left --test_dir test_data --rotation False
