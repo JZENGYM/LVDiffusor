@@ -87,7 +87,7 @@ wget https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alp
 ## Usage
 
 ### Dataset Generation with VLM and LLM ###
-We use GPT4 as the large language model, please prepare your keys for requesting the openai api. The config in [data_gen.py](data_gen.py) can be edited for prompting the VLM and LLM.
+We use GPT4 as the large language model, please prepare your openai keys for requesting the openai api. The config in [data_gen.py](data_gen.py) can be edited for prompting the VLM and LLM.
 
 Generate the layout dataset:
 ```bash
