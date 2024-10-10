@@ -13,7 +13,7 @@ from score_matching.loss import loss_fn_table_v2, loss_fn_uncond
 from score_matching.sampler import ode_sampler
 from score_matching.sde import (ExponentialMovingAverage, 
                                    diffusion_coeff, marginal_prob_std_v2, init_sde)
-from score_nets import ArrangeScoreModelGNN, ScoreModelGNN
+from score_matching.score_nets import ArrangeScoreModelGNN, ScoreModelGNN
 from torch.utils.tensorboard import SummaryWriter
 from torch_geometric.loader import DataLoader
 from tqdm import trange

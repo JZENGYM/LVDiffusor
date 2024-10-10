@@ -12,7 +12,7 @@ from ipdb import set_trace
 from PIL import Image
 from score_matching.sampler import ode_sampler
 from score_matching.sde import init_sde, marginal_prob_std_v2
-from score_nets import ArrangeScoreModelGNN, ScoreModelGNN
+from score_matching.score_nets import ArrangeScoreModelGNN, ScoreModelGNN
 from torch_geometric.loader import DataLoader
 from groundingdino.util.inference import Model
 from segment_anything import SamPredictor, sam_model_registry
