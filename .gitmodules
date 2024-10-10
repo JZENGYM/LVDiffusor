@@ -1,0 +1,3 @@
+[submodule "backbones/Grounding_SAM"]
+	path = backbones/Grounding_SAM
+	url = https://github.com/IDEA-Research/Grounded-Segment-Anything
