@@ -27,7 +27,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--input_rgb', default='')
-parser.add_argument('--scene_name', default='dinning_table_vanilla')
+parser.add_argument('--scene_name', default='dinning_table')
 def get_data_root(scene_name):
         return f'./datasets/{scene_name}/test_data'
 parser.add_argument('--data_root', default=get_data_root(parser.parse_known_args().scene_name),

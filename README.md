@@ -29,8 +29,56 @@ To install the LVDiffusor, follow these steps:
     pip install -r requirements.txt
     ```
 
-4. The detection module in our work depends on [GroundingDINO](https://github.com/IDEA-Research/Grounded-Segment-Anything). Please check the original repo and complete the setup for local deployment.
+4. The detection module in our work depends on [GroundingSAM](https://github.com/IDEA-Research/Grounded-Segment-Anything). Please check the original repo, download checkpoints for DINO and SAM, and complete the setup for [local deployment](https://github.com/IDEA-Research/Grounded-Segment-Anything/issues/75).
 
+You should set the environment variable manually as follows if you want to build a local GPU environment for Grounded-SAM:
+```bash
+export AM_I_DOCKER=False
+export BUILD_WITH_CUDA=True
+export CUDA_HOME=/path/to/cuda-11.3/
+```
+
+Install Segment Anything:
+
+```bash
+python -m pip install -e segment_anything
+```
+
+Install Grounding DINO:
+
+```bash
+pip install --no-build-isolation -e GroundingDINO
+```
+
+
+Install diffusers:
+
+```bash
+pip install --upgrade diffusers[torch]
+```
+
+Install osx:
+
+```bash
+git submodule update --init --recursive
+cd grounded-sam-osx && bash install.sh
+```
+
+Install RAM & Tag2Text:
+
+```bash
+git clone https://github.com/xinyu1205/recognize-anything.git
+pip install -r ./recognize-anything/requirements.txt
+pip install -e ./recognize-anything/
+```
+
+Download the pretrained weights
+```bash
+cd Grounded-Segment-Anything
+
+wget https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
+wget https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
+```
 
 ## Usage
 
@@ -50,7 +98,7 @@ python training.py --rotation False --scene_name dinning_table
 ### Evaluation ###
 To use LVDiffusor, download the checkpoints and run the following command:
 ```bash
-python eval_model.py --log_dir office_desk_left --test_dir test_data --rotation False
+python eval_model.py --input_rgb ./assets/rgb.png --scene_name dinning_table --rotation False
 ```
 
 
