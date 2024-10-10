@@ -10,7 +10,9 @@ LVDiffusor distills **functional arrangement knowledge** from **large models** i
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+- [Citation](#citation)
+- [Contact](#contact)
+
 
 ## Installation
 
