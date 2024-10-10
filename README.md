@@ -29,7 +29,9 @@ To install the LVDiffusor, follow these steps:
     pip install -r requirements.txt
     ```
 
-4. The detection module in our work depends on [GroundingSAM](https://github.com/IDEA-Research/Grounded-Segment-Anything). Please check the original repo, download checkpoints for DINO and SAM, and complete the setup for [local deployment](https://github.com/IDEA-Research/Grounded-Segment-Anything/issues/75).
+### Detection Submodule Installation ###
+
+The detection module in our work depends on [GroundingSAM](https://github.com/IDEA-Research/Grounded-Segment-Anything). Please check the original repo, download checkpoints for DINO and SAM, and complete the setup for [local deployment](https://github.com/IDEA-Research/Grounded-Segment-Anything/issues/75).
 
 You should set the environment variable manually as follows if you want to build a local GPU environment for Grounded-SAM:
 ```bash
