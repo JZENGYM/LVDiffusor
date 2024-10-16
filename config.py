@@ -1,5 +1,3 @@
-from pickle import FALSE
-
 import ml_collections
 
 # def get_config():
